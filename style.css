@@ -21,12 +21,15 @@
 
 
 * {
-    font-family: var(--font-primary);
-    color: var(--color-text-primary);
-    background-color: var(--color-bg);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font-primary);
+    color: var(--color-text-primary);
 }
 
 /*Barra de navegación*/
@@ -44,6 +47,8 @@ h1 {
     display: flex;
     justify-content: center;
     font-size: 25px;
+    margin-top: 0.4%;
+    
 }
 .navegacion {
     display: flex;
@@ -53,12 +58,24 @@ h1 {
 .navItems {
     width: 100%;
     display: flex;
+    margin-left: 10%;
 }
 
-.navItems li {
-    padding: 0 30px;
-    margin-top: 5px;
+.navItems a{
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+.navItems button {
+    width: 90px;
+    height: 100%;
     list-style: none;
+    font-size: 15px;
+    background-color: var(--color-bg);
+    border: none;
+}
+
+.navItems button:hover {
+    background-color: var(--color-card-bg);
 }
 /*seccion de foto*/
 .section {
@@ -66,6 +83,7 @@ h1 {
     width: 100%;
     display: flex;
     flex-direction: row;
+    height: auto;
 }
 
 .info {
@@ -73,23 +91,27 @@ h1 {
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
     height: auto;
+    
 }
 
-.info img {
+.section img {
     background-color: var(--color-card-bg);
-    width: 50%;
-
+    width: auto;
+    height:400px ;
+    margin-top: 100px;
+    margin-left: 10%;
 }
+
 
 .info ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    height: 10%;
+    height: auto;
     list-style: none;
+    margin-top: 150px;
 }
 
 .info i {
@@ -98,5 +120,46 @@ h1 {
     border-radius: 20%;
     margin: 10px;
     padding: 5px;
+    color: var(--color-text-primary);
 }
+
+.sectionH2 {
+    font-size: 40px;
+    margin-top: 70px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    color: var(--color-text-primary);
+}
+
+.buttonSection{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.parrafo {
+    width: 75%;
+    height: auto;
+    font-size: 15px ;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 150px;
+}
+
+.buttonSection button {
+    width: 100px;
+    height: 30px;
+    border: 2px solid #f14e68;
+    border-radius: 10px;
+    background-color: var(--color-bg);
+}
+
+.buttonSection a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+
+
 
