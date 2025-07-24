@@ -1,0 +1,102 @@
+:root {
+    --font-primary: 'poppins', sans-serif;
+    /*tipo de fuente*/
+    --color-bg: #1e1e2f;
+    /* Fondo general oscuro */
+    --color-text-primary: #ffffff;
+    /* Texto principal blanco */
+    --color-text-secondary: #b5b5c3;
+    /* Texto secundario gris claro */
+
+    /* Colores de acento */
+    --color-accent: #ff2d75;
+    /* Rosa para botones, íconos sociales, etc. */
+    --color-icon: #f14e68;
+    /* Rojo suave para íconos de servicios */
+
+    /* Colores de elementos */
+    --color-card-bg: #2c2c3a;
+    /* Fondo de las tarjetas/servicios */
+}
+
+
+* {
+    font-family: var(--font-primary);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Barra de navegación*/
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    
+}
+
+h1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+.navegacion {
+    display: flex;
+    width: 50%;
+    
+}
+.navItems {
+    width: 100%;
+    display: flex;
+}
+
+.navItems li {
+    padding: 0 30px;
+    margin-top: 5px;
+    list-style: none;
+}
+/*seccion de foto*/
+.section {
+    background-color: var(--color-card-bg);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    background-color: var(--color-card-bg);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    height: auto;
+}
+
+.info img {
+    background-color: var(--color-card-bg);
+    width: 50%;
+
+}
+
+.info ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    list-style: none;
+}
+
+.info i {
+    font-size: 20px;
+    border: 2px solid #f14e68;
+    border-radius: 20%;
+    margin: 10px;
+    padding: 5px;
+}
+
