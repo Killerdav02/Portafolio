@@ -1,5 +1,5 @@
 :root {
-    --font-primary: 'poppins', sans-serif;
+    --font-primary: sans-serif;
     /*tipo de fuente*/
     --color-bg: #1e1e2f;
     /* Fondo general oscuro */
@@ -15,7 +15,7 @@
     /* Rojo suave para íconos de servicios */
 
     /* Colores de elementos */
-    --color-card-bg: #2c2c3a;
+    --color-card-bg: #2a2a3b;
     /* Fondo de las tarjetas/servicios */
 }
 
@@ -39,7 +39,7 @@ body {
     width: 100%;
     height: auto;
     padding: 15px;
-    
+
 }
 
 h1 {
@@ -47,24 +47,32 @@ h1 {
     display: flex;
     justify-content: center;
     font-size: 25px;
-    margin-top: 0.4%;
-    
+    color: var(--color-icon);
 }
+
 .navegacion {
     display: flex;
     width: 50%;
-    
+
 }
+
 .navItems {
     width: 100%;
     display: flex;
     margin-left: 10%;
+    text-decoration: none;
 }
 
-.navItems a{
+.navItems a {
     text-decoration: none;
     color: var(--color-text-primary);
+    transition: color 0.3s ease;
 }
+
+.navItems a:hover {
+    color: var(--color-icon);
+}
+
 .navItems button {
     width: 90px;
     height: 100%;
@@ -72,11 +80,14 @@ h1 {
     font-size: 15px;
     background-color: var(--color-bg);
     border: none;
+    border-radius: 50px;
+    transition: color 0.3s ease;
 }
 
 .navItems button:hover {
     background-color: var(--color-card-bg);
 }
+
 /*seccion de foto*/
 .section {
     background-color: var(--color-card-bg);
@@ -92,17 +103,31 @@ h1 {
     display: flex;
     flex-direction: column;
     height: auto;
-    
 }
 
 .section img {
-    background-color: var(--color-card-bg);
     width: auto;
-    height:400px ;
+    height: 400px;
     margin-top: 100px;
-    margin-left: 10%;
+    margin-left: 15%;
+    padding-left: 40px;
 }
 
+.imagen {
+    position: relative;
+    display: inline-block;
+}
+
+.imagen::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--color-card-bg));
+    pointer-events: none;
+}
 
 .info ul {
     display: flex;
@@ -111,37 +136,50 @@ h1 {
     width: 100%;
     height: auto;
     list-style: none;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
-.info i {
-    font-size: 20px;
+.buttonredes button {
+    font-size: 15px;
     border: 2px solid #f14e68;
     border-radius: 20%;
     margin: 10px;
     padding: 5px;
     color: var(--color-text-primary);
+    background-color: var(--color-bg);
+}
+
+.buttonredes button:hover {
+    background-color: var(--color-card-bg);
+    /* Mantiene el fondo oscuro */
+    box-shadow: 0 0 10px 2px #f14e68;
+    /* Efecto de brillo rojito */
+    border-color: #f14e68;
+    /* Asegura que el borde siga rojito */
+    transition: 0.3s ease;
 }
 
 .sectionH2 {
     font-size: 40px;
-    margin-top: 70px;
+    margin-top: 40px;
     margin-left: 70px;
     display: flex;
     justify-content: center;
     color: var(--color-text-primary);
 }
 
-.buttonSection{
+.buttonSection {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+
+    margin-bottom: 100px;
 }
 
 .parrafo {
     width: 75%;
     height: auto;
-    font-size: 15px ;
+    font-size: 15px;
     display: flex;
     margin-top: 15px;
     margin-left: 150px;
@@ -153,6 +191,7 @@ h1 {
     border: 2px solid #f14e68;
     border-radius: 10px;
     background-color: var(--color-bg);
+
 }
 
 .buttonSection a {
@@ -160,6 +199,87 @@ h1 {
     color: var(--color-text-primary);
 }
 
+.buttonSection button:hover {
+    background-color: var(--color-card-bg);
+    /* Mantiene el fondo oscuro */
+    box-shadow: 0 0 10px 2px #f14e68;
+    /* Efecto de brillo rojito */
+    border-color: var(--color-icon);
+    /* Asegura que el borde siga rojito */
+    transition: 0.3s ease;
+}
 
+/* Servicios */
 
+.sectionServices {
+    margin-top: 120px;
+    margin-bottom: 70px;
+}
+
+.servicios2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios2 h3 {
+    font-size: 16px;
+    color: var(--color-icon);
+}
+
+.servicios2 h2 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.servicios2 p {
+    font-size: 12px;
+}
+
+.barrita {
+    border: none;
+    height: 3px;
+    background-color: var(--color-icon);
+    margin-top: 30px;
+    width: 60px;
+}
+/*tarjetas*/
+.servicios {
+    display: grid;
+    grid-template-columns: 280px 280px 280px;
+    grid-template-rows: 250px 250px;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 40px;
+}
+
+.servicios h4 {
+    font-size: 18px;
+    padding-top: 25px;
+}
+
+.servicios p {
+    padding-top: 25px;
+    font-size: 13px;
+}
+
+.card {
+    background-color: var(--color-card-bg);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(241, 78, 104, 0.3);
+}
+
+.card i {
+    color: var(--color-icon);
+    font-size: 25px;
+}
 
