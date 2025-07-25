@@ -244,6 +244,7 @@ h1 {
     margin-top: 30px;
     width: 60px;
 }
+
 /*tarjetas*/
 .servicios {
     display: grid;
@@ -282,4 +283,104 @@ h1 {
     color: var(--color-icon);
     font-size: 25px;
 }
+
+/* tercera seccion--------------------------------*/
+
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme h3 {
+    font-size: 40px;
+    color: var(--color-text-primary);
+    display: flex;
+    justify-content: center;
+
+}
+
+.aboutme p {
+    font-size: 12px;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barrita2 {
+    border: none;
+    height: 3px;
+    background-color: var(--color-icon);
+    margin-top: 30px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.articulo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 72px;
+}
+
+.imginfo {
+    width: 50%;
+    position: relative;
+    display: inline-block;
+}
+
+.imginfo img{
+    height: 400px;
+    float: left;
+    display: inline-block;
+}
+
+.imginfo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--color-bg));
+    pointer-events: none;
+}
+
+.articleRigh{
+    width: 50%;
+    padding-left: 1%;
+    padding-top: 30px;
+}
+.contentcards {
+    display: grid;
+    grid-template-columns: 180px 150px;
+    grid-template-rows: 80px 80px;
+    gap: 2rem;
+    padding: 2rem;
+    padding-left: 0%;
+}
+
+.contentcards h4{
+    font-size: 18px;
+    color: var(--color-icon);
+}
+
+.contentcards p{
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.subtitle p{
+    font-size: 13px;
+    padding-right: 30%;
+    padding-top: 25px;
+}
+
+
+
+
 
